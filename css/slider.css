@@ -1,28 +1,37 @@
-html {	
-	font-family: Arial;
-	font-family: Lato;
-    background-color: #303030;
-	font-size: 16px;
-	color: ivory;
+html {
+   font-family: Arial;
+   font-family: Lato;
+   background-color: #303030;
+   font-size: 16px;
+   color: ivory;
 }
 
-a{
+a {
    color: lightcyan;
-   text-decoration: none; 
+   text-decoration: none;
    margin: 20px 20px;
 }
 
 .slider-arrows {
-    width: 300px;
-	margin: 0 auto;
-    bottom: 30px;
-    position: absolute;
-    top: 85vh;
-    left: 40vw;
+   width: 300px;
+   margin: 0 auto;
+   bottom: 30px;
+   position: absolute;
+   top: 85vh;
+   left: 40vw;
 }
 
-.prev-slide {position: absolute; left: 0; z-index: 10;}
-.next-slide {position: absolute; right: 0; z-index: 10;}
+.prev-slide {
+   position: absolute;
+   left: 0;
+   z-index: 10;
+}
+
+.next-slide {
+   position: absolute;
+   right: 0;
+   z-index: 10;
+}
 
 #slider {
    position: relative;
@@ -42,12 +51,16 @@ a{
 }
 
 .slider-caption {
-   	position: absolute;
-    width: 300px;
-	margin: 0 auto;  
+   position: absolute;
+   width: 300px;
+   margin: 0 auto;
    left: 0;
    right: 0;
    z-index: 5;
 }
 
-img {border: none; width: 100%; min-height: 100%;}
+img {
+   border: none;
+   width: 100%;
+   min-height: 100%;
+}
