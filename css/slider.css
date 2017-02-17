@@ -3,8 +3,51 @@ html {
 	font-family: Lato;
     background-color: #303030;
 	font-size: 16px;
-	color: #fff;
+	color: ivory;
 }
 
-a{color: yellow;}
+a{
+   color: lightcyan;
+   text-decoration: none; 
+   margin: 20px 20px;
+}
 
+.slider-arrows {
+    width: 300px;
+	margin: 0 auto;
+    bottom: 30px;
+    position: absolute;
+    top: 85vh;
+    left: 40vw;
+}
+
+.prev-slide {position: absolute; left: 0; z-index: 10;}
+.next-slide {position: absolute; right: 0; z-index: 10;}
+
+#slider {
+   position: relative;
+   overflow: hidden;
+   height: 100%;
+}
+
+.slide-show {
+   position: absolute;
+   height: 100%
+}
+
+.single-slide {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+}
+
+.slider-caption {
+   	position: absolute;
+    width: 300px;
+	margin: 0 auto;  
+   left: 0;
+   right: 0;
+   z-index: 5;
+}
+
+img {border: none; width: 100%; min-height: 100%;}
