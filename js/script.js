@@ -25,13 +25,14 @@ $(function(){
    $("#container").css("height", height+60);
    
    $(".image").css("width", width);
-   $(".image").css("height", (height+60) );
+   $(".image").css("height", height );
    
    $("#slideshow").css("width", width);
    $("#slideshow").css("height", height);
    
    $(".arrow-box").css("width", width);
    $(".arrow-box").css("height", height);
+   $(".arrow").css("height", height);
    
    $(".arrow").css("padding-top", (height-80)/2);
    
