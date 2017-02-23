@@ -3,62 +3,93 @@
 /* jQuery 3.1.1 */
 
 /* ustawienie szerokosci slajdera */ 
-var sliderWidth = 640;
-var sliderHeight = 480;
+var sliderWidth = 800;
+var sliderHeight = 550;
 
 var index = 1;  // poczatkowy slajd - zakres 1-n 
 var slideCount; // przyjmuje wartosc dopiero po zadladowaniu dokumentu
 
-/********************************/
+/************************************************************/
 
 $(function(){  //funkcja uruchamiana raz po załadowaniu sie dokumentu
    
-    
+   setup(sliderWidth, sliderHeight);
+            
+});
+
+/************************************************************/
+//                     FUNKCJE
+
+//function setup();
+//function echo();
+//function letsDefineWidthsAndHeights(width, height);
+//function change(input);
+//function loadGraphics();
+
+/**************************************************************/
+
+//             >>  FUNKCJA DO BUTTONA W HTML  <<
+//             WYRZUCA 60400px WYSOKOSCI OKNA :D
+//function setValues(){
+//    console.log("\n SETTING NEW VALUES W H ------\n")
+//    var w = $("#width-input").val();
+//    var h = $("#height-input").val();
+//    console.log("-wh-->"+w+" x "+h+"\n");
+//    if(h>0){ sliderWidth = w }else{ echo("invalid width<><>")}
+//    if(w>0){ sliderHeight = h }else{ echo("invalid height<><>")}
+//    index = 1; 
+//    if(h>0 && w>0) setup(sliderWidth,sliderHeight);
+//}
+
+function setup(w, h){
+
    slideCount = $('#slideshow').children().length;
 
-   letsInitiallyDefineWidthsAndHeights(sliderWidth, sliderHeight);
-   
+   letsDefineWidthsAndHeights(w, h);
+
    //zaladowanie grafik z lorempixel.com
    loadGraphics();
-   
+
    //SCHOWANIE KAPSZYNÓW
    $("#slideshow").find(".slide>h3").hide(0);
-   
+
    //pokazanie aktualnego captiona
    $("#slideshow").find(".slide>h3").each(function(a){
          if(a+1 == index) $(this).show(200); 
    });
-   
-         
-});
-
-/********************************/
+}
 
 //troche duzo debugownia bylo to skrocilem :D
+//minus taki, ze nie wyswietla lini bledu
+
 function echo(variable){
    console.log(variable);
 }
 
-/*********************************/
 
-function letsInitiallyDefineWidthsAndHeights(width, height){
+
+function letsDefineWidthsAndHeights(width, height){
    
       
    $("#container").css("width", width);
    $("#container").css("height", height+60);
-   echo("container is now: "+width+"x"+height+"px");
+    echo("container is now: "+width+"x"+height+"px"); 
+   
+   $(".image").css("width", width);
+   $(".image").css("height", (height+60) );
+    echo("images are now: "+width+"x"+height+"px");
    
    $("#slideshow").css("width", width);
    $("#slideshow").css("height", height);
-   echo("slideshow is now: "+width+"x"+height+"px");
+    echo("slideshow is now: "+width+"x"+height+"px");
    
    $(".arrow-box").css("width", width);
    $(".arrow-box").css("height", height);
    echo("arrow-box is now: "+width+"x"+height+"px");
-   echo("sizing done...");
+    echo("sizing done...");
    
    $(".arrow").css("padding-top", (height-80)/2);
-   echo("arrows set...");
+    echo("arrows set...");
       
    //inicjalizacyjne pozycje
    
@@ -133,19 +164,33 @@ function change(input){
    
 }
 
-function loadGraphics(){
+function loadGraphics(input){
    
    //grafiki dodawane są po klasie image-$
       $("#slideshow").find(".slide>.image").each(function(b){
          $(this).addClass("image-"+(b+1));
       });
+   
+   if(input == 101){
    //podpięcie grafik z lorempixel.com
       $("#slideshow").find(".slide>.image").each(function(b){
          $(this).css("background-image",function(f){
             var ans = 'url(http://lorempixel.com/'+sliderWidth+'/'+(sliderHeight+b)+'/)';
-            echo("loaded graphic >> "+ans);
+            echo("loading graphic >> "+ans);
+            return ans;
+         });
+      });}   
+   
+   if(input == 102){
+   //podpięcie grafik lokalnie
+      $("#slideshow").find(".slide>.image").each(function(b){
+         $(this).addClass("image-"+(b+1));
+         $(this).css("background-image",function(){
+            var ans = 'url(gfx/img-'+(b+1)+'.jpg)';
+            echo("loading graphic >> "+ans);
             return ans;
          });
       });
       
+   }      
 }
