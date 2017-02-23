@@ -35,6 +35,8 @@ h3 {
 .n1{background-color: #d00;}
 .n2{background-color: #0d0;}
 .n3{background-color: #00d;}
+.n4{background-color: #dd0;}
+.n5{background-color: #0dd;}
 
 .image{
   width: 100%;
@@ -43,11 +45,13 @@ h3 {
   background-size: cover;
 }
 
-.image-1{background-image:url("http://lorempixel.com/480/320/")}
-.image-2{background-image:url("http://lorempixel.com/480/321/")}
-.image-3{background-image:url("http://lorempixel.com/480/322/")}
-.image-4{background-image:url("http://lorempixel.com/480/324/")}
-.image-5{background-image:url("http://lorempixel.com/480/325/")}
+/*
+.image-1{background-image:url("")}
+.image-2{background-image:url("")}
+.image-3{background-image:url("")}
+.image-4{background-image:url("")}
+.image-5{background-image:url("")}
+*/
 
 /*******************arrows***********************/
 

@@ -6,7 +6,7 @@
 var sliderWidth = 640;
 var sliderHeight = 480;
 
-var index = 3;  // poczatkowy slajd
+var index = 1;  // poczatkowy slajd - zakres 1-n 
 var slideCount; // przyjmuje wartosc dopiero po zadladowaniu dokumentu
 
 /********************************/
@@ -89,7 +89,7 @@ function change(input){
 
       echo("\n -----<<PREV-----");
 
-      if(index  == 1){
+      if(index  == 1 || index < 0){
          index = slideCount;
       }else{
          index--;
@@ -100,7 +100,7 @@ function change(input){
 
       echo("\n -----NEXT>>-----");
 
-      if(index  == slideCount){
+      if(index  == slideCount || index > slideCount){
          index = 1;
       }else{
          index++;
@@ -126,6 +126,7 @@ function change(input){
    //UKRYCIE
    $("#slideshow").find(".slide>h3").hide(0);
    //POKAZANIE WŁAŚCIWEGO CAPTIONA
+   
    $("#slideshow").find(".slide>h3").each(function(a){
          if(a+1 == index) $(this).show(200); 
    });
@@ -138,7 +139,7 @@ function loadGraphics(){
       $("#slideshow").find(".slide>.image").each(function(b){
          $(this).addClass("image-"+(b+1));
       });
-      
+   //podpięcie grafik z lorempixel.com
       $("#slideshow").find(".slide>.image").each(function(b){
          $(this).css("background-image",function(f){
             var ans = 'url(http://lorempixel.com/'+sliderWidth+'/'+(sliderHeight+b)+'/)';
