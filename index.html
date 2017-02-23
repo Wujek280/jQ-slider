@@ -2,72 +2,61 @@
 <html lang="pl">
 
 <head>
-   <title>jQ Slider</title>
-   <meta charset="UTF-8">
-   
-   <link rel="stylesheet" href="css/slider.css">
-   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> 
+    <meta charset="UTF-8">
+    
+	<link rel="stylesheet" href="css/bootstrap.min.css">    
+	<link rel="stylesheet" href="css/style.css">    
+
+	<title>Snip</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> 
 </head>
 
 <body>
-     <div id="slider">
-<!--      <div class="slide-show">-->
-        
-         <div class="single-slide"> 
-            <img src="/gfx/blue.jpg" alt="">
-            <p class="slider-caption"></p>
-         </div>
-         
-         <div class="single-slide"> 
-            <img src="gfx/purple.jpg" alt="">
-            <p class="slider-caption">Dupa</p>
-         </div>
-         
-         <div class="single-slide"> 
-            <img src="gfx/slide1.jpg" alt="">
-            <p class="slider-caption"></p>
-         </div>
-         
-         <div class="single-slide"> 
-            <img src="gfx/slide2.jpg" alt="">
-            <p class="slider-caption"></p>
-         </div>
-         
-         <div class="single-slide"> 
-            <img src="gfx/purple.jpg" alt="">
-            <p class="slider-caption"></p>
-         </div>
-         
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique magnam, nihil ipsam at earum molestiae, ad perferendis repellendus nostrum deleniti quia cum! Asperiores non, placeat numquam illum magnam magni, quibusdam!
-        
-<!--      </div>-->
 
-  
+      <div id="container">
+
+        <div id="slideshow">
+
+          <div class="slide n1">
+            <div class="image "></div>
+            <h3>Caption 1</h3>
+          </div>
+
+          <div class="slide n2">
+            <div class="image "></div>
+            <h3>Caption 2</h3>
+          </div>
+
+          <div class="slide n3">
+            <div class="image "></div>
+            <h3>Caption 3</h3>
+          </div>
+
+          <div class="slide n3">
+            <div class="image "></div>
+            <h3>Caption 4</h3>
+          </div>
+
+          <div class="slide n3">
+            <div class="image "></div>
+            <h3>Caption 5</h3>
+          </div>
+
+        </div>
+
+        <div class="arrow-box">
+          <div class="arrow fa fa-arrow-left fa-3x fa-inverse left" onclick="change(-1)"></div>
+          <div class="arrow fa fa-arrow-right fa-3x fa-inverse right" onclick="change(1)"></div>
+        </div>
+
       </div>
-   
-     <div class="slider-arrows">
-            <a href="" class="prev-slide fa fa-arrow-left  fa-3x"></a>
-            <a href="" class="next-slide fa fa-arrow-right fa-3x "></a>
-         </div>
 
-   <script src="js/jquery-3.1.1.js"></script>
-   <script src="js/script.js"></script>
-   
+    <script src="js/jquery-3.1.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+
+	
 </body>
-
 </html>
